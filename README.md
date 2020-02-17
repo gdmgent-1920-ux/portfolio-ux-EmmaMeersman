@@ -1,8 +1,8 @@
 # UX portfolio template 1920
 
-## Name:
+## Name:Emma Meersman
 
-## Group:
+## Group:1AVDb
 
 ## Getting Started
 
