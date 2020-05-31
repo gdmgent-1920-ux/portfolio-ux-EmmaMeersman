@@ -1,30 +1,267 @@
+body {
+  background-color: var(--color-background);
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  right: 0;
+}
 
-p{
-  font-family: 'Montserrat', sans-serif;   
-  color: var(--donkergrijs);
-} 
+.body-homepage {
+  margin: 0;
+}
 
-h1{
-  font-family: 'Sigmar One';
-  color: var(--roos);  
-  border-color: var(--lichtgrijs);
+
+.container-header {
+  position: fixed;
+  background-image: url(../pictures/header-background.jpg);
+  width: 100%;
+  background-size: cover;
+}
+
+.align-items-right {
+  justify-content: flex-end;
+}
+
+.logo {
+  align-self: center;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo p {
+  color: var(--color-yellow);
+  font-size: 190%;
+  text-align: left;
+  font-weight: 1000;
+  margin: 0;
+}
+
+
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.nav-links a:hover {
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+}
+
+.nav-links li.text {
+  margin-top: 12px;
+}
+
+.nav-links ul {
+  max-width: 100;
+  list-style-type: none;
+}
+
+
+
+.nav-links ul li {
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.nav-links ul li:last-of-type a {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.nav-links {
+  display: none;
+  max-width: 100;
+}
+
+.nav-links.toggled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+
+  .logo p {
+    color: var(--color-yellow);
+    font-size: 400%;
+    text-align: left;
+    font-weight: 1000;
+    margin: 0;
+  }
+
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    display: flex;
+    max-width: 100;
+    list-style-type: none;
+  }
+
+  .nav-links ul a {
+    margin-right: 25px;
+    padding-right: 25px;
+  }
+
+  .nav-links ul li {
+    margin-bottom: 0;
+  }
+
+  .nav-links ul li:last-of-type a {
+    margin-right: 0;
+    padding-right: 0;
+  }
 
 }
 
-header{
-    background-image: url(../pictures/header-picture.jpg) ;
-    width: auto;
-    height: 100px;
+/*
+ *HAMBURGER ICON
+ */
 
+.nav-toggler {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-:root{
-    --roos: #F5BFBF;
-    --lichtgrijs: #b8b8b8;
-    --donkergrijs: #707070;
-    --geel: #e8d240;
-}
-.lijstpagina img{
-    width: 100px;
+.nav-toggler .bar1,
+.nav-toggler .bar2,
+.nav-toggler .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--color-black);
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
+/* Rotate first bar */
+.nav-toggler.toggled .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  margin-left: 2px;
+}
+
+/* Fade out the second bar */
+.nav-toggler.toggled .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.nav-toggler.toggled .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+@media (min-width: 768px) {
+  .nav-toggler {
+    display: none;
+  }
+}
+
+
+/*SIDEBAR*/
+/* The sidebar menu */
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  margin-top: 4%;
+  z-index: -1;
+  left: 0;
+  background-color: var(--color-white);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav ul li{
+  list-style-type: none;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-left: 28px;
+}
+
+.sidenav .jaar{
+  list-style-type: none;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-left: 28px;
+}
+
+.sidenav .muziek{
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+}
+
+.sidenav .jaartallen img{
+  width: 8%;
+}
+
+.jaartallen .tijd{
+  margin-top: 0;
+  margin-left: 5px;
+}
+
+
+
+
+
+
+/* Style page content */
+.main {
+  margin-left: 160px;
+  /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+
+/*HOMEPAGE*/
+.container-main {
+  position: fixed;
+  background-image: url(../pictures/background-main.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -2;
+}
