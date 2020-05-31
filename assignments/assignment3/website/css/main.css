@@ -1,0 +1,30 @@
+
+p{
+  font-family: 'Montserrat', sans-serif;   
+  color: var(--donkergrijs);
+} 
+
+h1{
+  font-family: 'Sigmar One';
+  color: var(--roos);  
+  border-color: var(--lichtgrijs);
+
+}
+
+header{
+    background-image: url(../pictures/header-picture.jpg) ;
+    width: auto;
+    height: 100px;
+
+}
+
+:root{
+    --roos: #F5BFBF;
+    --lichtgrijs: #b8b8b8;
+    --donkergrijs: #707070;
+    --geel: #e8d240;
+}
+.lijstpagina img{
+    width: 100px;
+}
+
