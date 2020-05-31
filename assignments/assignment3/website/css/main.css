@@ -98,11 +98,12 @@ ul {
 @media (min-width: 768px) {
 
   .logo p {
-    color: var(--color-yellow);
+    color: var(--color-white);
     font-size: 400%;
     text-align: left;
     font-weight: 1000;
     margin: 0;
+    font-family:'Sigmar One', cursive;
   }
 
 
